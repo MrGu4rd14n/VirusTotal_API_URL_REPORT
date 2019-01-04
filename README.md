@@ -1,4 +1,4 @@
-## VIRUS TOTAL SCANNER FOR IP ADDRESSES
+## VIRUS TOTAL SCANNER FOR URL REPORT
 - usage:
   - scan_vt.py **-h**
   - scan_vt.py **-f**  **filename_with_ip.txt**
