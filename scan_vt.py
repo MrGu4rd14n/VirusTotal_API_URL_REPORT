@@ -1,4 +1,4 @@
-#!/usr/share/env python
+#!/usr/share/env python3
 import requests
 import time
 import json
