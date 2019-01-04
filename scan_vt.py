@@ -5,7 +5,6 @@ import json
 import os
 from pprint import pprint
 import optparse
-#Fonction des arguments
 try:
     os.system("clear")
 except:
@@ -27,6 +26,7 @@ def ascii_art():
          Made with love by 0xCyb3r                                
 ''')
 ascii_art()
+#Function for arguments
 def get_arguments():
     parser = optparse.OptionParser()
     parser.add_option("-f", "--fichier", dest="fichier", help="Fichier [.txt] contenant les adresses IP")
@@ -37,7 +37,7 @@ def get_arguments():
     if ".txt" not in options.fichier:
         parser.error("[-] Erreur veuillez choisir un fichier texte. Utilisez --help pour plus d'infos.")
     return options
-#Fonction des données
+#Function for json data
 def detections(url, params):
     json_data = requests.get(url, params=params).json()
     try:
@@ -61,7 +61,7 @@ def detections(url, params):
         detection_result = "__________________________________\n\n\033[33mSite:\033[00m %s \n\033[33mDate:\033[00m %s \n\033[33mMessage:\033[00m %s \n\033[33mLien VT:\033[00m %s\n__________________________________" %(json_url, json_date, json_msg, json_link)
     return detection_result
 
-#Lancement du script
+#Reporting urls to VT
 options = get_arguments()
 try:
     os.remove("ip_malveillantes.txt")
@@ -80,7 +80,7 @@ try:
 except:
     os.system("cls")
 
-#Résultat des analyses
+#Detections results from VT
 ascii_art()
 try:
     os.remove("ip_malveillantes.txt")
