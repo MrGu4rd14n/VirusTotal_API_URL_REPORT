@@ -27,11 +27,7 @@ def ascii_art():
 
          Made with love by 0xCyb3r                                
 ''')
-
-
 ascii_art()
-
-
 # Function for arguments
 def get_arguments():
     parser = optparse.OptionParser()
