@@ -5,10 +5,9 @@ import json
 import os
 from pprint import pprint
 import optparse
-try:
-    os.system("clear")
-except:
-    os.system("cls")
+import subprocess
+clear = lambda: subprocess.call('cls||clear', shell=True)
+clear()
 def ascii_art():
     print('''\033[91m 
      _              _               _   
@@ -75,10 +74,9 @@ with open(options.fichier) as f:
         params = {'apikey': 'API_KEY_HERE', 'resource': url_to_scan, 'scan': 1} #ApiKey à mettre ici
         print(detections(url, params))
         time.sleep(15.0)
-try:
-    os.system("clear")
-except:
-    os.system("cls")
+        
+clear = lambda: subprocess.call('cls||clear', shell=True)
+clear()
 
 #Detections results from VT
 ascii_art()
