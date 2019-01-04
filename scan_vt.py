@@ -72,7 +72,7 @@ with open(options.fichier) as f:
     for line in f:
         url_to_scan = line
         url = 'https://www.virustotal.com/vtapi/v2/url/report'
-        params = {'apikey': 'a66e2e5116b8114b1ecff90a217b6744d1006b53ffab330b6b7f1c4c6f0c4fd7', 'resource': url_to_scan, 'scan': 1} #ApiKey à mettre ici
+        params = {'apikey': 'API_KEY_HERE', 'resource': url_to_scan, 'scan': 1} #ApiKey à mettre ici
         print(detections(url, params))
         time.sleep(15.0)
 try:
@@ -91,7 +91,7 @@ with open(options.fichier) as f:
     for line in f:
         url_to_scan = line
         url = 'https://www.virustotal.com/vtapi/v2/url/report'
-        params = {'apikey': 'a66e2e5116b8114b1ecff90a217b6744d1006b53ffab330b6b7f1c4c6f0c4fd7', 'resource': url_to_scan, 'scan': 1} #ApiKey à mettre ici
+        params = {'apikey': 'API_KEY_HERE', 'resource': url_to_scan, 'scan': 1} #ApiKey à mettre ici
         print(detections(url, params))
         time.sleep(15.0)
 
